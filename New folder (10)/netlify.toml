@@ -1,12 +1,12 @@
 [build]
-  base = "client"
+  base = "."  # <-- key fix
   publish = "client/dist"
-  command = "npm run build"
+  command = "cd client && npm install && npm run build"
 
 [build.environment]
   NODE_VERSION = "22"
   VITE_API_URL = "https://your-backend-api-url.com"
-  VITE_STRIPE_KEY = "pk_live_your_key"
+  VITE_STRIPE_KEY = "pk_live_..."
   VITE_TURN_SERVER = "turn:turn.tabla.mk"
 
 [[redirects]]
