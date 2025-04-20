@@ -1,12 +1,12 @@
 [build]
-  base = "."                          # ← fixed from "client"
-  publish = "client/dist"            # ← where Vite builds output
-  command = "cd client && npm install && npm run build"
+  base = "client"                            # Go into client/
+  publish = "client/dist"                   # Output directory from Vite
+  command = "npm install && npm run build"  # Run from client/
 
 [build.environment]
   NODE_VERSION = "22"
   VITE_API_URL = "https://your-backend-api-url.com"
-  VITE_STRIPE_KEY = "pk_live_your_key"
+  VITE_STRIPE_KEY = "pk_live_..."
   VITE_TURN_SERVER = "turn:turn.tabla.mk"
 
 [[redirects]]
